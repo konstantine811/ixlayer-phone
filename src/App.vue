@@ -1,28 +1,39 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+<template lang="pug">
+  #app
+    phone-ixlayer
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import PhoneIxlayer from "@/components/Phone-ixlayer";
 export default {
   name: "app",
   components: {
-    HelloWorld
+    PhoneIxlayer
   }
 };
 </script>
 
-<style>
+<style lang="scss">
+//colors
+$blue: #63c6fe;
+
+body {
+  margin: 0;
+}
+
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background: $blue;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.d-flex {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
 }
 </style>

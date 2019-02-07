@@ -1,0 +1,154 @@
+g#Logo {
+    transform: translate(10px, -44px);
+    image {
+      opacity: 0;
+    }
+}
+
+g#bottom-3 {
+    transform: translate(0px, 19px);
+    animation: down-anim-bottom 2s ease-out 1 forwards;
+    &.animated {
+      animation: up-anim-bottom 1.5s 0.2s ease-out 1 forwards, fly-anim 5s 1.7s cubic-bezier(0.38, 0.35, 0, 0.43) infinite forwards;
+    }
+}
+
+g#middle-bottom {
+    transform: translate(0px, 46px);
+    animation: down-anim-middle-bottom 2s ease-out 1 forwards;
+    &.animated {
+      animation: up-anim-middle-bottom 1.6s 0.2s ease-out 1 forwards, fly-anim 5s 1.8s cubic-bezier(0.38, 0.35, 0, 0.43) infinite forwards;
+    }
+}
+
+g#middle-top {
+  transform: translate(0px, 76px);
+  animation: down-anim-middle-top 2s ease-out 1 forwards;
+  &.animated {
+    animation: up-anim-middle-top 1.7s 0.2s ease-out 1 forwards, fly-anim 5s 1.9s cubic-bezier(0.38, 0.35, 0, 0.43) infinite forwards;
+  }
+}
+
+g#top-3 {
+  transform: translate(0px, 105px);
+  animation: down-anim-top 2s ease-out 1 forwards;
+  &.animated {
+    animation: up-anim-top 2s ease-out 1 forwards, fly-anim 5s 2s cubic-bezier(0.38, 0.35, 0, 0.43) infinite forwards;
+  }
+}
+
+text.text {
+  transform: matrix(0.82, -0.57, 0.82, 0.57, 465.85, 388.49);
+  cursor: pointer;
+  transition: 0.5s ease-out;
+  opacity: 0;
+  &.up {
+    transform: matrix(0.82, -0.57, 0.82, 0.57, 465.85, 383.49);
+    opacity: 1;
+  }
+  &:hover {
+    transform: matrix(0.82, -0.57, 0.82, 0.57, 465.85, 383.49);
+    opacity: 1;
+  }
+}
+
+// top
+@keyframes up-anim-top {
+  from {
+    transform: translate(0px, 105px);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes down-anim-top {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(0px, 105px);
+  }
+}
+
+//middle
+@keyframes up-anim-middle-top {
+  from {
+    transform: translate(0px, 76px);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes down-anim-middle-top {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(0px, 76px);
+  }
+}
+
+
+//middle-bottom
+@keyframes up-anim-middle-bottom {
+  from {
+     transform: translate(0px, 46px);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes down-anim-middle-bottom {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+     transform: translate(0px, 46px);
+  }
+}
+
+
+//bottom
+@keyframes up-anim-bottom {
+  from {
+    transform: translate(0px, 19px);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes down-anim-bottom {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+   transform: translate(0px, 19px);
+  }
+}
+
+@keyframes fly-anim {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 45px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes up-text-anim {
+  to {
+    transform: matrix(0.82, -0.57, 0.82, 0.57, 461.85, 349.49);
+  }
+}
+
+
+@keyframes blur-anim {
+
+}
